@@ -10,7 +10,7 @@ export default function Spinner() {
 		<div style={spinnerStyle}>
 			<Loader
 				type="Oval"
-				color="#00BFFF"
+				color="#00BF"
 				height={100}
 				width={100}
 				timeout={3000} //3 secs

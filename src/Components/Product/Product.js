@@ -1,21 +1,23 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Products.css';
 
 const Product = ({ product }) => {
 
-    // console.log(book);
-
     return (
-        <div className="col-md-3">
-            <img style={{ height: '300px', width: '300px' }} src={product.url} alt="" />
+        <div className=" p-1 my-2 mx-5" style={{height: '400px', width:"22%"}}>
+        <Card style={{ width: '18rem' }}            >
+            <Card.Img variant="top" style={{ height: '200px', width: '180px', display: 'block', margin: 'auto'}} src={product.url} />
+            <Card.Body>
+                <Card.Title>{product.name}</Card.Title>
+                <Card.Text> {product.weight}</Card.Text>
+                <h5> $ {product.price} <Link to={`/checkout/${product._id}`}><Button variant="primary">Bye Now</Button></Link></h5>
+            </Card.Body>
+        </Card>
 
-            <h4>{product.name}</h4>
-            <h5>{product.weight}</h5>
-            <h5>${product.price}   <Link to={`/checkout/${product._id}`} > <button class="btn btn-primary" type="button">Buy Now</button> </Link></h5>
-            {/* <h5>Price: $ {product.price} <Link to={`/checkout/${product._id}`}>Bye Now</Link></h5> */}
-
-            {/* <Link to={`/checkout/${product._id}`} > <button class="btn btn-primary" type="button">Buy Now</button> </Link> */}
-        </div>
+    </div>
     );
 };
 

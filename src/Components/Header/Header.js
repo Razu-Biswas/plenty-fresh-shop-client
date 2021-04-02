@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-// import { RiLogoutCircleRLine } from 'react-icons/ri';
+import { RiLogoutCircleRLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ProductContext } from '../Context/ProductContext';
@@ -94,9 +94,9 @@ function Header() {
 								Login
 							</Link>
 						)}
+
+
 {/* 
-
-
 						{!isSignedIn ? (
 							<li className="nav-item">
 								<Link className="nav-link  btn btn-warning" to="/login">

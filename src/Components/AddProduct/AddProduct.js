@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { Button, Col } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 
 const AddProduct = () => {
 
@@ -13,7 +14,7 @@ const AddProduct = () => {
     const onSubmit = data => {
         console.log(product);
 
-        const url = `http://localhost:3300/addProduct`;
+        const url = `https://strawberry-crumble-66293.herokuapp.com/addProduct`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -52,6 +53,7 @@ const AddProduct = () => {
                 const url = (product.url = response.data.data.display_url);
                 setProduct({ ...product, url });
                 setIMageURL(response.data.data.display_url);
+                toast.success('Product Save  Successful');
             })
             .catch(function (error) {
                 console.log(error);
@@ -68,8 +70,8 @@ const AddProduct = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridPassword">
-                        <Form.Label>Author Name</Form.Label>
-                        <Form.Control type="string" placeholder="Enter weight" name="weight" onChange={(e) => handleAddProduct(e)} />
+                        <Form.Label>Product Weight/pcs/Pack</Form.Label>
+                        <Form.Control type="string" placeholder="Enter weight/pcs/pack" name="weight" onChange={(e) => handleAddProduct(e)} />
                     </Form.Group>
                 </Form.Row>
 
