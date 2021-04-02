@@ -1,0 +1,30 @@
+
+
+.Header a {
+	color: rgba(92, 204, 17, 0.904);
+	font-weight: bold;
+	margin: 5px;
+}
+.Header a:hover {
+	color: mediumvioletred;
+}
+.Header button {
+	color: whitesmoke;
+	font-weight: bold;
+}
+.Header button svg {
+	margin-left: 5px;
+	font-size: 19px;
+}
+a:hover {
+	text-decoration: none;
+}
+.Header .logoutBtn svg {
+	color: black;
+}
+
+@media only screen and (max-width: 600px) {
+	.Header {
+	  background-color: lightblue;
+	}
+  }

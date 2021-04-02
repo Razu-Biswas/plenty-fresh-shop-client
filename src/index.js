@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+import { ProductProvider } from './Components/Context/ProductContext';
 import reportWebVitals from './reportWebVitals';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ProductProvider>
+     <React.StrictMode>
+         <App />
+     </React.StrictMode>
+  </ProductProvider>,
   document.getElementById('root')
 );
 
