@@ -70,7 +70,7 @@ const AddProduct = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridPassword">
-                        <Form.Label>Product Weight/pcs/Pack</Form.Label>
+                        <Form.Label>Product Weight/Pcs/Pack</Form.Label>
                         <Form.Control type="string" placeholder="Enter weight/pcs/pack" name="weight" onChange={(e) => handleAddProduct(e)} />
                     </Form.Group>
                 </Form.Row>
