@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Product from './Product';
 import { Table } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import { useHistory } from 'react-router';
+
 
 function ManageProduct() {
 	const [product, setProduct] = useState([]);
@@ -16,11 +16,10 @@ function ManageProduct() {
 		axios.delete(`https://strawberry-crumble-66293.herokuapp.com/deleteproduct/${id}`).then((res) => {
 			console.log(res);
 			toast.warning('Delete Successfully');
-			history.push('/admin/')
 		});
 	};
 
-	const history = useHistory();
+	
 	return (
 		<div>
 		<div>
@@ -53,11 +52,3 @@ function ManageProduct() {
 }
 
 export default ManageProduct;
-
-
-
-// <div className="d-flex flex-wrap">
-// {product.map((product) => (
-// 	<Product product={product} deleteProduct={deleteProduct}  />
-// ))}
-// </div>

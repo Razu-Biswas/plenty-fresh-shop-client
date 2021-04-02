@@ -59,18 +59,3 @@ function ManageOrder() {
 }
 
 export default ManageOrder;
-
-
-
-// <div>
-// {orders.map((order, index) => (
-// 	<OrderData key={index} order={order}>
-// 		<button
-// 			className="btn-danger btn"
-// 			onClick={() => deleteOrder(order._id)}
-// 		>
-// 			Delete
-// 		</button>
-// 	</OrderData>
-// ))}
-// </div>

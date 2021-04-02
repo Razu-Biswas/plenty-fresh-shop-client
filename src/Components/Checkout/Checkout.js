@@ -29,7 +29,7 @@ const Checkout = () => {
 			imgUrl: url,
 			date: new Date(),
 		};
-		// console.log(orderInfo);
+		
 		axios.post(`https://strawberry-crumble-66293.herokuapp.com/saveorder`, orderInfo).then((res) => {
 			console.log(res);
 			toast.success('Your CheckOut Successful');
@@ -44,7 +44,7 @@ const Checkout = () => {
 						<thead>
 							<tr>
 								<th>Sl</th>
-								<th>Discription</th>
+								<th>Description</th>
 								<th>Quantity</th>
 								<th>Price</th>
 								<th>Checkout</th>
@@ -56,7 +56,7 @@ const Checkout = () => {
 								<td>{product.name}</td>
 								<td>1</td>
 								<td>{product.price}</td>
-								<td><Link to path="/"> <Button className="btn-primary btn" onClick={checkoutBtn}>Confirm</Button>  </Link> </td>
+								<td><Link to path="/"> <Button className="btn-danger btn" onClick={checkoutBtn}>Confirm</Button>  </Link> </td>
 								
 							</tr>
 						</tbody>
@@ -67,10 +67,9 @@ const Checkout = () => {
 				<div className="col-md-4">
 				<img style={{ width: '200px' }} src={product.url} alt="" />
 					<h5>{product.name}</h5>
-					<h6>Weight{product.weight}</h6>
+					<h6>Weight:- {product.weight}</h6>
 					<h5>Price:- ${product.price}</h5>
-					<h3>Please confirm your Order.</h3>
-					{/* <button className="btn-primary btn" onClick={checkoutBtn}>Checkout</button> */}
+					<h6> Confirm your Order.</h6>
 				</div>
 			</div>
 

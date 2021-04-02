@@ -14,12 +14,12 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className="p-3 d-flex flex-wrap justify-content-center">
-			{product.length === 0 && <Spinner />}
-			{product.map((product) => (
-				<Product product={product}></Product>
-			))}
-		</div>
+		<div  className=" p-3 d-flex flex-wrap justify-content-center">
+		{product.length === 0 && <Spinner />}
+		{product.map((product) => (
+			<Product product={product}></Product>
+		))}
+	</div>
 	);
 };
 

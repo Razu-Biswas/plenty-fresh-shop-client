@@ -83,7 +83,7 @@ const AddProduct = () => {
 
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.File id="formcheck-api-regular">
-                            <Form.File.Label>Add Product Cover Photo</Form.File.Label>
+                            <Form.File.Label>Add Product Photo</Form.File.Label>
                             <Form.File.Input onChange={handleImageUpload} />
                         </Form.File>
 

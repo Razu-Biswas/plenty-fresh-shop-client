@@ -28,7 +28,6 @@ function Header() {
 					email: '',
 				};
 				setUser(signedOutUser);
-				// console.log(res);
 			})
 			.catch((error) => {
 				console.log('Error:', error);
@@ -69,7 +68,7 @@ function Header() {
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link" to="/admin">
+							<Link className="nav-link" to="/admin/addproduct">
 								Admin
 							</Link>
 						</li>
@@ -78,25 +77,7 @@ function Header() {
 								Deals
 							</Link>
 						</li>
-						{isSignedIn ? (
-							<>
-								<li className="nav-item">
-									<p>{name}</p>
-								</li>
-								<li className="nav-item">
-									<button className="btn btn-primary" onClick={handleSignOut}>
-										Logout
-									</button>
-								</li>
-							</>
-						) : (
-							<Link className="nav-link" to="/login">
-								Login
-							</Link>
-						)}
 
-
-{/* 
 						{!isSignedIn ? (
 							<li className="nav-item">
 								<Link className="nav-link  btn btn-warning" to="/login">
@@ -113,9 +94,7 @@ function Header() {
 									<RiLogoutCircleRLine />
 								</button>
 							</li>
-						)} */}
-
-
+						)}
 
 					</ul>
 				</div>

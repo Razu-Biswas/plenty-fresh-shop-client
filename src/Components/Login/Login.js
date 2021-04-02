@@ -5,7 +5,7 @@ import firebaseConfig from '../../firebase.Config';
 import { ProductContext } from '../Context/ProductContext';
 import { useHistory, useLocation } from 'react-router';
 import { FcGoogle } from 'react-icons/fc';
-import './Login';
+import './Login.css';
 
 if (!firebase.apps.length) {
 	firebase.initializeApp(firebaseConfig);
@@ -60,19 +60,11 @@ const Login = () => {
 
 	return (
 		<div>
-			<h1>This is login</h1>
-			{user.isSignedIn ? (
-				<button onClick={handleSignOut}>Sign Out</button>
-			) : (
-				<button onClick={handleSignIn}>Sign In</button>
-			)}
-			{user.isSignedIn && <h3>Welcome, {user.name}</h3>}
-
 			<div className="d-flex flex-column align-items-center googleLogin mt-5">
-			
+			<h4>Press Button To Login</h4>
 			<button className="btn googleLogin" onClick={handleSignIn}>
-				<h5>Press Button To Login</h5>
-				<FcGoogle />
+				
+				<FcGoogle className="googleLogin" />
 			</button>
 		</div>
 			

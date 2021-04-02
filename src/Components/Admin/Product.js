@@ -7,7 +7,7 @@ function Product({ product, deleteProduct }) {
 		<tr>
 			<td>{name}</td>
 			<td>{weight}</td>
-			<td>{price}</td>
+			<td>${price}</td>
 			<td><button className="btn btn-danger" onClick={() => deleteProduct(_id)}>
 				Delete
 		</button></td>

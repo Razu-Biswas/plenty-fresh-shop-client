@@ -8,22 +8,10 @@ import ManageProduct from './ManageProduct';
 const Admin = () => {
 	return (
 		<div className="container">
-			
+
 			<div className="row">
 
-				<div className="col-md-9">
-					<Route path="/admin/addproduct">
-						<AddBooks />
-					</Route>
-					<Route path="/admin/manageorder">
-						<ManageOrder />
-					</Route>
-					<Route path="/admin/manageproduct">
-						<ManageProduct />
-					</Route>
-				</div>
-				<div className="col-md-3">
-
+				<div className="col-md-3 bg-light">
 
 					<Link to="/admin/addproduct">Add products</Link>
 					<br />
@@ -31,8 +19,21 @@ const Admin = () => {
 					<br />
 					<Link to="/admin/manageproduct">Manage products</Link>
 				</div>
+
+				<div className="col-md-9 bg-warning">
+					<Route path="/admin/addproduct">
+					<AddBooks />
+				</Route>
+				<Route path="/admin/manageorder">
+					<ManageOrder />
+				</Route>
+				<Route path="/admin/manageproduct">
+					<ManageProduct />
+				</Route>
 			</div>
+
 		</div>
+		</div >
 	);
 };
 
