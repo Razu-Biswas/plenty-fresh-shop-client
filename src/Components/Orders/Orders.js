@@ -13,7 +13,7 @@ const Orders = () => {
 			email: user.email,
 		};
 		axios
-			.post(`https://strawberry-crumble-66293.herokuapp.com/userorder`, email)
+			.post(`https://plenty-fresh-server.onrender.com/userorder`, email)
 			.then((response) => setOrderData(response.data));
 			
 	}, [user]);

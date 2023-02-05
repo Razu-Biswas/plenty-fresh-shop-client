@@ -8,12 +8,12 @@ import { toast } from 'react-toastify';
 function ManageProduct() {
 	const [product, setProduct] = useState([]);
 	useEffect(() => {
-		axios.get(`https://strawberry-crumble-66293.herokuapp.com/product`).then((response) => {
+		axios.get(`https://plenty-fresh-server.onrender.com/product`).then((response) => {
 			setProduct(response.data);
 		});
 	}, []);
 	const deleteProduct = (id) => {
-		axios.delete(`https://strawberry-crumble-66293.herokuapp.com/deleteproduct/${id}`).then((res) => {
+		axios.delete(`https://plenty-fresh-server.onrender.com/deleteproduct/${id}`).then((res) => {
 			console.log(res);
 			toast.warning('Delete Successfully');
 		});

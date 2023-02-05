@@ -14,7 +14,7 @@ const AddProduct = () => {
     const onSubmit = data => {
         console.log(product);
 
-        const url = `https://strawberry-crumble-66293.herokuapp.com/addProduct`;
+        const url = `https://plenty-fresh-server.onrender.com/addProduct`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -44,7 +44,7 @@ const AddProduct = () => {
     const handleImageUpload = event => {
         console.log(event.target.files[0])
         const imageData = new FormData();
-        imageData.set('key', '2069d40dd5e6a45ff8c555c5b14063fd');
+        imageData.set('key', '3d746c5f8d8d011dc07a596dfeb00a19');
         imageData.append('image', event.target.files[0]);
 
         axios.post('https://api.imgbb.com/1/upload',

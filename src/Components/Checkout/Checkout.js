@@ -14,7 +14,7 @@ const Checkout = () => {
 
 	const { email } = user;
 	useEffect(() => {
-		fetch(`https://strawberry-crumble-66293.herokuapp.com/checkout/${id}`)
+		fetch(`https://plenty-fresh-server.onrender.com/checkout/${id}`)
 			.then((response) => response.json())
 			.then((data) => setProduct(data[0]));
 	}, [id]);
@@ -30,7 +30,7 @@ const Checkout = () => {
 			date: new Date(),
 		};
 		
-		axios.post(`https://strawberry-crumble-66293.herokuapp.com/saveorder`, orderInfo).then((res) => {
+		axios.post(`https://plenty-fresh-server.onrender.com/saveorder`, orderInfo).then((res) => {
 			console.log(res);
 			toast.success('Your CheckOut Successful');
 		});

@@ -8,12 +8,12 @@ import OrderData from '../Orders/OrderData';
 function ManageOrder() {
 	const [orders, setOrder] = useState([]);
 	useEffect(() => {
-		axios.get(`https://strawberry-crumble-66293.herokuapp.com/getorder`).then((response) => {
+		axios.get(`https://plenty-fresh-server.onrender.com/getorder`).then((response) => {
 			setOrder(response.data);
 		});
 	}, []);
 	const deleteOrder = (id) => {
-		axios.delete(`https://strawberry-crumble-66293.herokuapp.com/deleteorder/${id}`).then((res) => {
+		axios.delete(`https://plenty-fresh-server.onrender.com/deleteorder/${id}`).then((res) => {
 			toast.success('YuY Deleted');
 			history.push('/admin/manageorder/')
 		});

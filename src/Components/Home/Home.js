@@ -8,7 +8,7 @@ const Home = () => {
 	const [product, setProduct] = useState([]);
 
 	useEffect(() => {
-		fetch('https://strawberry-crumble-66293.herokuapp.com/product')
+		fetch('https://plenty-fresh-server.onrender.com/product')
 			.then((res) => res.json())
 			.then((data) => setProduct(data));
 	}, []);
